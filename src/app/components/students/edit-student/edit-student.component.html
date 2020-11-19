@@ -1,0 +1,40 @@
+<div class="container">
+    <h2>Edit Student Form</h2>
+    <form [formGroup]="editForm" (ngSubmit)="updateStudent()" class="form-inline">
+
+        <div class="row">
+            <div class="col">
+                <label for="name">First Name:</label>
+                <input type="text" formControlName="firstName" class="form-control" alfabeticoTag >
+            </div>
+    
+            <div class="col">
+                <label for="lastName">Last Name:</label>
+                <input type="text" formControlName="lastName" class="form-control" alfabeticoTag >
+            </div>
+
+            <div class="col">
+                <label for="userName">UserName:</label>
+                <input type="text" formControlName="userName" class="form-control" >
+            </div>
+
+        </div>
+    
+        <div class="row">
+            <div class="col">
+                <label for="age">Age:</label>
+                <input type="text" formControlName="age" class="form-control" appNumerosTag >
+            </div>
+
+            <div class="col">
+                <label for="career">Career:</label>
+                <input type="text" formControlName="career" class="form-control" alfabeticoTag >
+            </div>
+
+        </div>
+        
+        <button type="submit" class="btn btn-success" [disabled]="!editForm.valid">Update</button>    
+        
+    </form>
+</div>
+
